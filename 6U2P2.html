@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Quiz</title>
+  <style>
+    /* Body & container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .quiz-container:hover {
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    p.question {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    label {
+      display: block;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    label:hover {
+      background: #e8f0fe;
+      border-color: #4a90e2;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      accent-color: #4a90e2;
+    }
+
+    .correct {
+      background-color: #e6f7e6 !important;
+      border-color: #28a745 !important;
+      color: #155724;
+      font-weight: bold;
+    }
+
+    .wrong {
+      background-color: #fce8e6 !important;
+      border-color: #dc3545 !important;
+      color: #721c24;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+	
+	
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h2>இரண்டாம் பருவம் - Part 2 </h2>
+    <form id="quiz">
+	
+	<div class="question-block">
+      <p class="question">1.  கழுத்தில் சூடுவது _______________.</p>
+      <label><input type="radio" name="q1" value="தார்">தார்</label>
+      <label><input type="radio" name="q1" value="கணையாழி">கணையாழி</label>
+	  <label><input type="radio" name="q1" value="தண்டை">தண்டை</label>
+	  <label><input type="radio" name="q1" value="மேகலை">மேகலை</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">2. கதிரவனின் மற்றொரு பெயர் __________________.</p>
+      <label><input type="radio" name="q2" value="புதன்">புதன்</label>
+      <label><input type="radio" name="q2" value="ஞாயிறு">ஞாயிறு</label>
+	  <label><input type="radio" name="q2" value="சந்திரன்">சந்திரன்</label>
+      <label><input type="radio" name="q2" value="செவ்வாய்">செவ்வாய்</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">3. ‘வெண்குடை’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது ______</p><br>
+      <label><input type="radio" name="q3" value="வெண் + குடை">வெண் + குடை</label>
+      <label><input type="radio" name="q3" value="வெண்மை + குடை">வெண்மை + குடை</label>
+	  <label><input type="radio" name="q3" value="வெம் + குடை">வெம் + குடை</label>
+      <label><input type="radio" name="q3" value="வெம்மை + குடை">வெம்மை + குடை</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">4. ’பொற்கோட்டு’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது </p>
+      <label><input type="radio" name="q4" value="பொன் + கோட்டு">பொன் + கோட்டு</label>
+      <label><input type="radio" name="q4" value="பொற் + கோட்டு">பொற் + கோட்டு</label>
+	  <label><input type="radio" name="q4" value="பொண் + கோட்டு">பொண் + கோட்டு</label>
+      <label><input type="radio" name="q4" value="பொற்கோ + இட்டு">பொற்கோ + இட்டு</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">5. கொங்கு + அலர் என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல்</p>
+      <label><input type="radio" name="q5" value="கொங்குஅலர்">கொங்குஅலர்</label>
+      <label><input type="radio" name="q5" value="கொங்அலர்">கொங்அலர்</label>
+	  <label><input type="radio" name="q5" value="கொங்கலர்">கொங்கலர்</label>
+      <label><input type="radio" name="q5" value="கொங்குலர்">கொங்குலர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">6. அவன் + அளிபோல் என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல்</p>
+      <label><input type="radio" name="q6" value="அவன்அளிபோல்">அவன்அளிபோல்</label>
+      <label><input type="radio" name="q6" value="அவனளிபோல்">அவனளிபோல்</label>
+	  <label><input type="radio" name="q6" value="அவன்வளிபோல்">அவன்வளிபோல்</label>
+      <label><input type="radio" name="q6" value="அவனாளிபோல்">அவனாளிபோல்</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">7. காணி நிலம் வேண்டும் பராசக்தி காணி நிலம் வேண்டும் – அங்குத் தூணில் அழகியதாய் – நன்மாடங்கள் துய்ய நிறத்தினதாய் – இந்த பாடல் வரியின் ஆசிரியர் யார்?</p><br>
+	  <label><input type="radio" name="q7" value="பாரதிதாசன்">பாரதிதாசன்</label>
+      <label><input type="radio" name="q7" value="அழ. வள்ளியப்பா">அழ. வள்ளியப்பா</label>
+	  <label><input type="radio" name="q7" value="வாணிதாசன்">வாணிதாசன்</label>
+      <label><input type="radio" name="q7" value="பாரதியார்">பாரதியார்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">8. அந்தக் காணி நிலத்திடையே – ஓர் மாளிகை கட்டித் தரவேண்டும் – அங்குக் கேணி அருகினிலே – தென்னைமரம் கீற்றும் இளநீரும் – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் (தொகுப்பு) எது?</p></br>
+      <label><input type="radio" name="q8" value="பாரதிதாசன் கவிதைகள்">பாரதிதாசன் கவிதைகள்</label>
+      <label><input type="radio" name="q8" value="அழ. வள்ளியப்பா கவிதைகள்">அழ. வள்ளியப்பா கவிதைகள்</label>
+	  <label><input type="radio" name="q8" value="வாணிதாசன் கவிதைகள்">வாணிதாசன் கவிதைகள்</label>
+      <label><input type="radio" name="q8" value="பாரதியார் கவிதைகள்">பாரதியார் கவிதைகள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">9. பத்துப் பன்னிரண்டு – தென்னைமரம் பக்கத்திலே வேணும் * – நல்ல முத்துச் சுடர் போலே – நிலாவொளி முன்பு வரவேணும் – இந்த பாடல் வரியின் ஆசிரியர் யார்?</p><br>
+      <label><input type="radio" name="q9" value="பாரதிதாசன்">பாரதிதாசன்</label>
+      <label><input type="radio" name="q9" value="அழ. வள்ளியப்பா">அழ. வள்ளியப்பா</label>
+	  <label><input type="radio" name="q9" value="வாணிதாசன்">வாணிதாசன்</label>
+      <label><input type="radio" name="q9" value="பாரதியார்">பாரதியார்</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">10. அங்குக் கத்துங் குயிலோசை – சற்றே வந்து காதில் படவேணும் – என்றன் சித்தம் மகிழ்ந்திடவே – நன்றாய் இளம் தென்றல் வரவேணும் – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் (தொகுப்பு) எது?</p>
+      <label><input type="radio" name="q10" value="பாரதிதாசன் கவிதைகள்">பாரதிதாசன் கவிதைகள்</label>
+      <label><input type="radio" name="q10" value="அழ. வள்ளியப்பா கவிதைகள்">அழ. வள்ளியப்பா கவிதைகள்</label>
+	  <label><input type="radio" name="q10" value="வாணிதாசன் கவிதைகள்">வாணிதாசன் கவிதைகள்</label>
+      <label><input type="radio" name="q10" value="பாரதியார் கவிதைகள்">பாரதியார் கவிதைகள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">11. இருபதாம் நூற்றாண்டின் இணையற்ற கவிஞர், அவரது இயற்பெயர் சுப்பிரமணியன். இளமையிலேயே சிறப்பாகக் கவிபாடும் திறன் பெற்றவர் – இந்த கூற்றோடு தொடர்புடையவர் யார்?</p><br>
+      <label><input type="radio" name="q11" value="மீ.ராசேந்திரன்">மீ.ராசேந்திரன்</label>
+      <label><input type="radio" name="q11" value="பாரதியார்">பாரதியார்</label>
+	  <label><input type="radio" name="q11" value="மனோன்மணியம்">மனோன்மணியம்</label>
+      <label><input type="radio" name="q11" value="நாமக்கல் கவிஞர்">நாமக்கல் கவிஞர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">12. எட்டயபுர மன்னரால் பாரதி என்னும் பட்டம் வழங்கிச் சிறப்பிக்கப்பட்டவர். தம் கவிதையின் வழியாக விடுதலை உணர்வை ஊட்டியவர். மண் உரிமைக்காகவும் பெண் உரிமைக்காகவும் பாடியவர். நாட்டுப்பற்றும் மொழிப்பற்றும் மிக்க பாடல்கள் பலவற்றைப் படைத்தவர் – இந்த கூற்றோடு தொடர்புடையவர் யார்?</p><br>
+      <label><input type="radio" name="q12" value="சுத்தானந்த பாரதியார்">சுத்தானந்த பாரதியார்</label>
+      <label><input type="radio" name="q12" value="பாரதிதாசன்">பாரதிதாசன்</label>
+	  <label><input type="radio" name="q12" value="பாரதியார்">பாரதியார்</label>
+      <label><input type="radio" name="q12" value="நாமக்கல் கவிஞர்">நாமக்கல் கவிஞர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">13. பாஞ்சாலி சபதம், கண்ணன் பாட்டு, குயில் பாட்டு போன்ற நூல்களின் ஆசிரியர் யார்?</p>
+      <label><input type="radio" name="q13" value="மீ.ராசேந்திரன்">மீ.ராசேந்திரன்</label>
+      <label><input type="radio" name="q13" value="பாரதியார்">பாரதியார்</label>
+	  <label><input type="radio" name="q13" value="மனோன்மணியம்">மனோன்மணியம்</label>
+      <label><input type="radio" name="q13" value="நாமக்கல் கவிஞர்">நாமக்கல் கவிஞர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">14. ’கிணறு’ என்பதைக் குறிக்கும் சொல் __________.</p><br>
+      <label><input type="radio" name="q14" value="ஏரி">ஏரி</label>
+      <label><input type="radio" name="q14" value="கேணி">கேணி</label>
+	  <label><input type="radio" name="q14" value="குளம்">குளம்</label>
+      <label><input type="radio" name="q14" value="ஆறு">ஆறு</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">15. ’சித்தம்’ என்பதன் பொருள் ___________.</p><br>
+      <label><input type="radio" name="q15" value="உள்ளம்">உள்ளம்</label>
+      <label><input type="radio" name="q15" value="மணம்">மணம்</label>
+	  <label><input type="radio" name="q15" value="குணம்">குணம்</label>
+      <label><input type="radio" name="q15" value="வனம்">வனம்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">16. மாடங்கள் என்பதன் பொருள் மாளிகையின் __________.</p><br>
+      <label><input type="radio" name="q16" value="அடுக்குகள்">அடுக்குகள்</label>
+      <label><input type="radio" name="q16" value="கூரை">கூரை</label>
+	  <label><input type="radio" name="q16" value="சாளரம்">சாளரம்</label>
+      <label><input type="radio" name="q16" value="வாயில்">வாயில்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">17. நன்மாடங்கள் என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது __________.</p>
+      <label><input type="radio" name="q17" value="நன் + மாடங்கள்">நன் + மாடங்கள்</label>
+      <label><input type="radio" name="q17" value="நற் + மாடங்கள்">நற் + மாடங்கள்</label>
+	  <label><input type="radio" name="q17" value="நன்மை + மாடங்கள்">நன்மை + மாடங்கள்</label>
+      <label><input type="radio" name="q17" value="நல் + மாடங்கள்">நல் + மாடங்கள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">18. நிலத்தினிடையே என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது</p>
+      <label><input type="radio" name="q18" value="நிலம் + இடையே">நிலம் + இடையே</label>
+      <label><input type="radio" name="q18" value="நிலத்தின் + இடையே">நிலத்தின் + இடையே</label>
+	  <label><input type="radio" name="q18" value="நிலத்து + இடையே">நிலத்து + இடையே</label>
+      <label><input type="radio" name="q18" value="நிலத் + திடையே">நிலத் + திடையே</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">19. முத்து + சுடர் என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல்</p>
+      <label><input type="radio" name="q19" value="முத்துசுடர்">முத்துசுடர்</label>
+      <label><input type="radio" name="q19" value="முச்சுடர்">முச்சுடர்</label>
+	  <label><input type="radio" name="q19" value="முத்துடர்">முத்துடர்</label>
+      <label><input type="radio" name="q19" value="முத்துச்சுடர்">முத்துச்சுடர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">20. நிலா + ஒளி என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல்</p>
+      <label><input type="radio" name="q20" value="நிலாஒளி">நிலாஒளி</label>
+      <label><input type="radio" name="q20" value="நிலஒளி">நிலஒளி</label>
+	  <label><input type="radio" name="q20" value="நிலவொளி">நிலவொளி</label>
+      <label><input type="radio" name="q20" value="நிலவுஒளி">நிலவுஒளி</label><br>
+	</div>
+
+    
+  <button type="button" onclick="checkAnswers()">சரிபார்க்கவும்</button>
+  
+  </form>
+
+
+<h3 id="result"></h3>
+
+</div>
+
+  <script>
+function checkAnswers() {
+  let score = 0;
+
+  const answers = {
+    q1: "தார்",
+    q2: "ஞாயிறு",
+    q3: "வெண்மை + குடை",
+    q4: "பொன் + கோட்டு",
+    q5: "கொங்கலர்",
+    q6: "அவனளிபோல்",
+    q7: "பாரதியார்",
+    q8: "பாரதியார் கவிதைகள்",
+    q9: "பாரதியார்",
+    q10: "பாரதியார் கவிதைகள்",
+    q11: "பாரதியார்",
+    q12: "பாரதியார்",
+    q13: "பாரதியார்",
+    q14: "கேணி",
+    q15: "உள்ளம்",
+    q16: "அடுக்குகள்",
+    q17: "நன்மை + மாடங்கள்",
+    q18: "நிலத்தின் + இடையே",
+    q19: "முத்துச்சுடர்",
+    q20: "நிலவொளி"
+  };
+
+  let unanswered = [];
+
+  // ✅ Step 1: Check unanswered மட்டும்
+  for (let q in answers) {
+    let selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (!selected) {
+      unanswered.push(q);
+    }
+  }
+
+  // 🚨 If any unanswered → STOP here
+  if (unanswered.length > 0) {
+    document.getElementById("result").style.color = "red";
+    document.getElementById("result").innerText =
+      "தயவுசெய்து அனைத்து கேள்விகளுக்கும் பதிலளிக்கவும்! விடுபட்டவை: " +
+      unanswered.join(", ");
+    return;
+  }
+
+  // ✅ Step 2: Now do highlighting + score
+  for (let q in answers) {
+    let options = document.querySelectorAll(`input[name="${q}"]`);
+
+    options.forEach(option => {
+      let label = option.parentElement;
+      label.classList.remove("correct", "wrong");
+
+      if (option.value === answers[q]) {
+        label.classList.add("correct");
+      }
+
+      if (option.checked) {
+        if (option.value === answers[q]) {
+          score++;
+        } else {
+          label.classList.add("wrong");
+        }
+      }
+    });
+  }
+
+  // ✅ Final score
+  document.getElementById("result").style.color = "green";
+  document.getElementById("result").innerText =
+    "உங்கள் மதிப்பெண்: " + score + "/" + Object.keys(answers).length;
+}
+
+</script>
+</body>
+</html>
